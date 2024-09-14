@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescription Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/solaimanlipi" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Generate Prescription</h1>
+        <form id="prescriptionForm">
+            <button type="submit">Generate Prescription PDF</button>
+            <label for="drName">Doctor's Name:</label>
+            <input type="text" id="drName" name="drName" required value="Dr SK Islam">
+
+            <label for="patientName">Patient's Name:</label>
+            <input type="text" id="patientName" name="patientName" required value="Dr SK Islam">
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required value="23">
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required value="Male">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="mobile">Mobile No:</label>
+            <input type="tel" id="mobile" name="mobile" required value="968574321456">
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" value="Hakola, Panchla Howrah-711322">Hakola, Panchla Howrah-711322</textarea>
+
+            <label for="cheifComplains">Cheif Complains:</label>
+            <input type="tel" id="cheifComplains" name="cheifComplains" required value="Eye pain, Headech">
+
+            <label for="diagnosis">Diagnosis Details:</label>
+            <textarea id="diagnosis" name="diagnosis" value="Drdfdfdf dfdfd SK Islam"></textarea>
+
+            <label for="medicine">Medicine Details:</label>
+            <textarea id="medicine" name="medicine" value="Dr SK dfdfdfdf dfdfdIslam"></textarea>
+
+            <button type="submit">Generate Prescription PDF</button>
+        </form>
+        
+    </div>
+     <!-- Add an iframe to view the generated PDF -->
+     <div class="pdf-viewer">
+        <iframe id="pdfFrame" width="100%" height="1200px"></iframe>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
