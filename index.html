@@ -1,60 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prescription Generator by SK Aminul</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Generate Prescription</h1>
-        <form id="prescriptionForm">
-            <button type="submit">Generate Prescription PDF</button>
-            <label for="drName">Doctor's Name:</label>
-            <input type="text" id="drName" name="drName" required value="Dr SK Islam">
+    <!-- Bootstrap design starts here-->
 
-            <label for="patientName">Patient's Name:</label>
-            <input type="text" id="patientName" name="patientName" required value="Dr SK Islam">
+    <div class="container main-container">
+        <!-- header section starts-->
+        <section class="row">
+            <div class="col-12 header">
+                <div class="row">
+                    <div class="col-3 left-box borders">
+                        <div class="row">
+                            <img src="images/1.png" alt="dsd">
+                            <img src="images/2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-6 middle-box borders text-center">
+                        <h2>OPTICAL ZONE</h2>
+                        <img src="images/chosma.png" alt="sdsd">
+                        <h5>RANIHATI PURANO BAZAR (M.P.B.K MARKET)</h5>
+                        <h5>Panchla, Howrah-711322 Mob:8777466025 / 9836392452</h5>
+                    </div>
+                    <div class="col-3 right-box borders">
+                        <img src="images/3.jpg" alt="dsd" class="row">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- header section ends-->
+        <!-- Vision exam report box starts-->
+        <section class="row vission-report borders">
+            <div class="col-3">
+                <h5>V.E.R # <input type="text" id="ver" placeholder="Enter V.E.R Number" name="ver" class="ver" required></h5>
+            </div>
+            <div class="col-6">
+                <h3>VISION EXAMINATION REPORT</h3>
+            </div>
+            <div class="col-3">
+                <h5>Date : <input type="text" id="datePicker" placeholder="Enter Date" name="datePicker"
+                        class="datePicker"></h5>
+            </div>
+        </section>
+        <!-- Vision exam report box ends-->
 
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" required value="23">
+        <!-- Dr and Patient Details starts-->
+         <form  id="prescriptionForm">
+        <section class="row patient-details borders pt-1  pb-1">
+            <div class="col-2">
+                <h5>Doctor Name # </h5>
+            </div>
+            <div class="col-10">
+                <select class="form-control" id="drNameDropdown" required>
+                    <option value="">Select Dr Name </option>
+                    <option>B.D.ROY [ D.D.S. (KOL), D.C.L.P (KOL) PHA ]</option>
+                    <option>RIYAZUDDIN SARDAR [ CONSULTANT OPTOMETRIST ]</option>
+                    <option>SHAIKH SAMSER ALI [ D.O.S. (KOL), F.C.L.I. (ALIGARH) ]</option>
+                    <option>DEBALINA HAR [ OPTOMETRIST & VISION SPECIALIST D.OPTOM ]</option>
+                    <option>IMAM NAWRUZ [ D.O.S. (KOL), CONSULTANT OPTOMETRIST ]</option>
+                    <option>JAHADUL HAQUE [ CONSULTANT OPTOMETRIST D.O., B.B.S. ]</option>
+                    <option>JANNATUNESHA KHATUN [ (O.D.) WBUT ]</option>
+                </select>
+            </div>
 
-            <label for="gender">Gender:</label>
-            <select id="gender" name="gender" required value="Male">
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
-            </select>
+            <div class="col-2 mt-1">
+                <h5>Patient Name # </h5>
+            </div>
+            <div class="col-4 mt-1">
+                <input type="text" id="patientName" placeholder="Enter Name" name="name" class="name" maxlength="30" required>
+            </div>
+            <div class="col-3 mt-1">
+                <input type="text" id="age" placeholder="Enter Age" name="age" class="age" maxlength="2" required>
+            </div>
+            <div class="col-3 mt-1">
+                <select class="form-control" id="gender" required>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div>
+            <div class="col-2">
+                <h5>Address # </h5>
+            </div>
+            <div class="col-7">
+                <input type="text" id="address" placeholder="Enter Address" name="address" class="address"
+                    maxlength="50">
+            </div>
+            <div class="col-3 mt-1">
+                <input type="text" id="mobile" placeholder="Enter Mobile" name="mobile" class="mobile" maxlength="10">
+            </div>
+        </section>
+        <!-- Dr and Patient Details starts-->
+        <!-- Chief Complain starts-->
+        <section class="row chief-complain borders mt-1 pb-1 pt-1">
+            <div class="col-2 pr-0">
+                <h5 class="">Chief Complaint #</h5>
+            </div>
+            <div class="col-10">
+                <input type="text" id="cheifComplains" placeholder="Enter Chef Complaints" name="cheifComplains"
+                    class="cheifComplains" maxlength="50">
+            </div>
+        </section>
+        <!-- Chief Complain ends-->
 
-            <label for="mobile">Mobile No:</label>
-            <input type="tel" id="mobile" name="mobile" required value="968574321456">
+        <!--History and Treatment starts-->
+        <section class="row history-treatment mt-1">
+            <div class="col-4 pl-2">
+                <div class="history-box">History & Clinical Finding</div>
+                <div class="history-desc">
+                    <textarea id="historyDetails" class="form-control" aria-label="With textarea" rows="10"
+                        cols="50" placeholder="Enter History & Clinical Finding"></textarea>
+                </div>
+                <!--Investigation starts-->
 
-            <label for="address">Address:</label>
-            <textarea id="address" name="address" value="Hakola, Panchla Howrah-711322">Hakola, Panchla Howrah-711322</textarea>
+                <p>Investigation :</p>
+                <input type="text" id="bp" placeholder="Enter BP Value Eg. 120/80" name="bp" class="bp" maxlength="15">
+                <input type="text" id="ppbs" placeholder="Enter PPBS Value" name="ppbs" class="ppbs" maxlength="15">
+                <input type="text" id="biometry" placeholder="Enter Biometry Value" name="biometry" class="biometry" maxlength="15">
+                <input type="text" id="syringing" placeholder="Enter Syringing Value" name="syringing" class="syringing" maxlength="15">
+                <input type="text" id="tonometry" placeholder="Enter Tonometry Value" name="tonometry" class="tonometry" maxlength="15">
+                <input type="text" id="ecg" placeholder="Enter ECG Value" name="ecg" class="ecg" maxlength="15">
+                <!--Investigation ends-->
 
-            <label for="cheifComplains">Cheif Complains:</label>
-            <input type="tel" id="cheifComplains" name="cheifComplains" required value="Eye pain, Headech">
-
-            <label for="diagnosis">Diagnosis Details:</label>
-            <textarea id="diagnosis" name="diagnosis" value="Drdfdfdf dfdfd SK Islam"></textarea>
-
-            <label for="medicine">Medicine Details:</label>
-            <textarea id="medicine" name="medicine" value="Dr SK dfdfdfdf dfdfdIslam"></textarea>
-
-            <button type="submit" id="submit">Generate Prescription PDF</button>
-        </form> 
+            </div>
+            <div class="col-8 pr-2 pl-0">
+                <div class="treatment-box">Treatment</div>
+                <div class="treatment-desc"></div>
+                <textarea id="treatmentDetails" class="form-control" aria-label="With textarea" rows="10"
+                    cols="50" placeholder="Enter Medicine Details Eg: 1. Paracitamol 500"></textarea>
+                <!-- Spectacle lenses starts-->
+                <div class="treatment-box mt-1">Spectacle Lenses</div>
+                <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">Eye</th>
+                        <th scope="col">D.Sph</th>
+                        <th scope="col">D.Cyl</th>
+                        <th scope="col">Axis</th>
+                        <th scope="col">Add</th>
+                        <th scope="col">Vision</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">RE</th>
+                        <td> <input type="text" id="DSphRE" placeholder="D.Sph RE" name="DSphRE" class="DSphRE" maxlength="10"></td>
+                        <td> <input type="text" id="DCylRE" placeholder="D.Cyl RE" name="DCylRE" class="DCylRE" maxlength="10"></td>
+                        <td> <input type="text" id="AxisRE" placeholder="Axis RE" name="AxisRE" class="AxisRE" maxlength="10"></td>
+                        <td> <input type="text" id="AddRE" placeholder="Add RE" name="AddRE" class="AddRE" maxlength="10"></td>
+                        <td> <input type="text" id="VisionRE" placeholder="Vision RE" name="VisionRE" class="VisionRE" maxlength="10"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">LE</th>
+                        <td> <input type="text" id="DSphLE" placeholder="D.Sph LE" name="DSphLE" class="DSphLE" maxlength="10"></td>
+                        <td> <input type="text" id="DCylLE" placeholder="D.Cyl LE" name="DCylLE" class="DCylLE" maxlength="10"></td>
+                        <td> <input type="text" id="AxisLE" placeholder="Axis LE" name="AxisLE" class="AxisLE" maxlength="10"></td>
+                        <td> <input type="text" id="AddLE" placeholder="Add LE" name="AddLE" class="AddLE" maxlength="10"></td>
+                        <td> <input type="text" id="VisionLE" placeholder="Vision LE" name="VisionLE" class="VisionLE" maxlength="10"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                <!-- Spectacle lenses starts-->
+                  <!-- Remarks starts-->
+        <section class="row chief-complain border mt-1 pb-1 pt-1 ml-1 mr-1">
+            <div class="col-3 pr-0 mt-2">
+                <h5 class="">Remarks #</h5>
+            </div>
+            <div class="col-9">
+                <input type="text" id="remarks" placeholder="Enter Remarks " name="remarks"
+                    class="cheifComplains" maxlength="40">
+            </div>
+        </section>
+        <!-- Remarks ends-->
+                  <!-- Created By starts-->
+        <section class="row chief-complain border mt-1 pb-1 pt-1 ml-1 mr-1">
+            <div class="col-3 pr-0 mt-2">
+                <h5 class="">Created By #</h5>
+            </div>
+            <div class="col-9">
+                <input type="text" id="createdBy" placeholder="Enter Staf Name" name="CreatedBy"
+                    class="cheifComplains" maxlength="20" required>
+            </div>
+        </section>
+        <button type="submit" id="submit" class="btn btn-warning">Generate Prescription PDF</button>
+    </form>
+        <!-- Created By ends-->
+            </div>
     </div>
-     <!-- Add an iframe to view the generated PDF -->
-    
+    </section>
+    <!--History and Treatment starts-->
+    </div>
+    <!-- Bootstrap design ends  here-->
 
+    <!-- Add an iframe to view the generated PDF -->
+
+    <div class="pdf-viewer">
+        <iframe id="pdfFrame" class="pdfFrame" width="1500" height="1000"></iframe>
+    </div>
     <!--POPUP -->
-    <div class="wrapper">
+    <!-- <div class="wrapper">
         <a href="#demo-modal">Open Demo Modal</a>
-    </div>
-    
+    </div> -->
+
     <div id="demo-modal" class="modal">
         <div class="modal__content">
             <div class="pdf-viewer">
@@ -62,10 +218,11 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
     <script>
         // Get the modal
 
     </script>
 </body>
+
 </html>
