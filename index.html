@@ -42,7 +42,8 @@
         <!-- Vision exam report box starts-->
         <section class="row vission-report borders">
             <div class="col-3">
-                <h5>V.E.R # <input type="text" id="ver" placeholder="Enter V.E.R Number" name="ver" class="ver" required></h5>
+                <h5>V.E.R # <input type="text" id="ver" placeholder="Enter V.E.R Number" name="ver" class="ver"
+                        required></h5>
             </div>
             <div class="col-6">
                 <h3>VISION EXAMINATION REPORT</h3>
@@ -55,146 +56,164 @@
         <!-- Vision exam report box ends-->
 
         <!-- Dr and Patient Details starts-->
-         <form  id="prescriptionForm">
-        <section class="row patient-details borders pt-1  pb-1">
-            <div class="col-2">
-                <h5>Doctor Name # </h5>
-            </div>
-            <div class="col-10">
-                <select class="form-control" id="drNameDropdown" required>
-                    <option value="">Select Dr Name </option>
-                    <option>B.D.ROY [ D.D.S. (KOL), D.C.L.P (KOL) PHA ]</option>
-                    <option>RIYAZUDDIN SARDAR [ CONSULTANT OPTOMETRIST ]</option>
-                    <option>SHAIKH SAMSER ALI [ D.O.S. (KOL), F.C.L.I. (ALIGARH) ]</option>
-                    <option>DEBALINA HAR [ OPTOMETRIST & VISION SPECIALIST D.OPTOM ]</option>
-                    <option>IMAM NAWRUZ [ D.O.S. (KOL), CONSULTANT OPTOMETRIST ]</option>
-                    <option>JAHADUL HAQUE [ CONSULTANT OPTOMETRIST D.O., B.B.S. ]</option>
-                    <option>JANNATUNESHA KHATUN [ (O.D.) WBUT ]</option>
-                </select>
-            </div>
-
-            <div class="col-2 mt-1">
-                <h5>Patient Name # </h5>
-            </div>
-            <div class="col-4 mt-1">
-                <input type="text" id="patientName" placeholder="Enter Name" name="name" class="name" maxlength="30" required>
-            </div>
-            <div class="col-3 mt-1">
-                <input type="text" id="age" placeholder="Enter Age" name="age" class="age" maxlength="2" required>
-            </div>
-            <div class="col-3 mt-1">
-                <select class="form-control" id="gender" required>
-                    <option>Male</option>
-                    <option>Female</option>
-                </select>
-            </div>
-            <div class="col-2">
-                <h5>Address # </h5>
-            </div>
-            <div class="col-7">
-                <input type="text" id="address" placeholder="Enter Address" name="address" class="address"
-                    maxlength="50">
-            </div>
-            <div class="col-3 mt-1">
-                <input type="text" id="mobile" placeholder="Enter Mobile" name="mobile" class="mobile" maxlength="10">
-            </div>
-        </section>
-        <!-- Dr and Patient Details starts-->
-        <!-- Chief Complain starts-->
-        <section class="row chief-complain borders mt-1 pb-1 pt-1">
-            <div class="col-2 pr-0">
-                <h5 class="">Chief Complaint #</h5>
-            </div>
-            <div class="col-10">
-                <input type="text" id="cheifComplains" placeholder="Enter Chef Complaints" name="cheifComplains"
-                    class="cheifComplains" maxlength="50">
-            </div>
-        </section>
-        <!-- Chief Complain ends-->
-
-        <!--History and Treatment starts-->
-        <section class="row history-treatment mt-1">
-            <div class="col-4 pl-2">
-                <div class="history-box">History & Clinical Finding</div>
-                <div class="history-desc">
-                    <textarea id="historyDetails" class="form-control" aria-label="With textarea" rows="10"
-                        cols="50" placeholder="Enter History & Clinical Finding"></textarea>
+        <form id="prescriptionForm">
+            <section class="row patient-details borders pt-1  pb-1">
+                <div class="col-2">
+                    <h5>Doctor Name # </h5>
                 </div>
-                <!--Investigation starts-->
+                <div class="col-10">
+                    <select class="form-control" id="drNameDropdown" required>
+                        <option value="">Select Dr Name </option>
+                        <option>Dr. B.D.ROY [ D.D.S. (KOL), D.C.L.P (KOL) PHA ]</option>
+                        <option>Dr. RIYAZUDDIN SARDAR [ CONSULTANT OPTOMETRIST ]</option>
+                        <option>Dr. SHAIKH SAMSER ALI [ D.O.S. (KOL), F.C.L.I. (ALIGARH) ]</option>
+                        <option>Dr. DEBALINA HAR [ OPTOMETRIST & VISION SPECIALIST D.OPTOM ]</option>
+                        <option>Dr. IMAM NAWRUZ [ D.O.S. (KOL), CONSULTANT OPTOMETRIST ]</option>
+                        <option>Dr. JAHADUL HAQUE [ CONSULTANT OPTOMETRIST D.O., B.B.S. ]</option>
+                        <option>Dr. JANNATUNESHA KHATUN [ (O.D.) WBUT ]</option>
+                    </select>
+                </div>
 
-                <p>Investigation :</p>
-                <input type="text" id="bp" placeholder="Enter BP Value Eg. 120/80" name="bp" class="bp" maxlength="15">
-                <input type="text" id="ppbs" placeholder="Enter PPBS Value" name="ppbs" class="ppbs" maxlength="15">
-                <input type="text" id="biometry" placeholder="Enter Biometry Value" name="biometry" class="biometry" maxlength="15">
-                <input type="text" id="syringing" placeholder="Enter Syringing Value" name="syringing" class="syringing" maxlength="15">
-                <input type="text" id="tonometry" placeholder="Enter Tonometry Value" name="tonometry" class="tonometry" maxlength="15">
-                <input type="text" id="ecg" placeholder="Enter ECG Value" name="ecg" class="ecg" maxlength="15">
-                <!--Investigation ends-->
+                <div class="col-2 mt-1">
+                    <h5>Patient Name # </h5>
+                </div>
+                <div class="col-4 mt-1">
+                    <input type="text" id="patientName" placeholder="Enter Name" name="name" class="name" maxlength="30"
+                        required>
+                </div>
+                <div class="col-3 mt-1">
+                    <input type="text" id="age" placeholder="Enter Age" name="age" class="age" maxlength="2" required>
+                </div>
+                <div class="col-3 mt-1">
+                    <select class="form-control" id="gender" required>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+                <div class="col-2">
+                    <h5>Address # </h5>
+                </div>
+                <div class="col-7">
+                    <input type="text" id="address" placeholder="Enter Address" name="address" class="address"
+                        maxlength="50">
+                </div>
+                <div class="col-3 mt-1">
+                    <input type="text" id="mobile" placeholder="Enter Mobile" name="mobile" class="mobile"
+                        maxlength="10">
+                </div>
+            </section>
+            <!-- Dr and Patient Details starts-->
+            <!-- Chief Complain starts-->
+            <section class="row chief-complain borders mt-1 pb-1 pt-1">
+                <div class="col-2 pr-0">
+                    <h5 class="">Chief Complaint #</h5>
+                </div>
+                <div class="col-10">
+                    <input type="text" id="cheifComplains" placeholder="Enter Chef Complaints" name="cheifComplains"
+                        class="cheifComplains" maxlength="50">
+                </div>
+            </section>
+            <!-- Chief Complain ends-->
 
-            </div>
-            <div class="col-8 pr-2 pl-0">
-                <div class="treatment-box">Treatment</div>
-                <div class="treatment-desc"></div>
-                <textarea id="treatmentDetails" class="form-control" aria-label="With textarea" rows="10"
-                    cols="50" placeholder="Enter Medicine Details Eg: 1. Paracitamol 500"></textarea>
-                <!-- Spectacle lenses starts-->
-                <div class="treatment-box mt-1">Spectacle Lenses</div>
-                <table class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th scope="col">Eye</th>
-                        <th scope="col">D.Sph</th>
-                        <th scope="col">D.Cyl</th>
-                        <th scope="col">Axis</th>
-                        <th scope="col">Add</th>
-                        <th scope="col">Vision</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">RE</th>
-                        <td> <input type="text" id="DSphRE" placeholder="D.Sph RE" name="DSphRE" class="DSphRE" maxlength="10"></td>
-                        <td> <input type="text" id="DCylRE" placeholder="D.Cyl RE" name="DCylRE" class="DCylRE" maxlength="10"></td>
-                        <td> <input type="text" id="AxisRE" placeholder="Axis RE" name="AxisRE" class="AxisRE" maxlength="10"></td>
-                        <td> <input type="text" id="AddRE" placeholder="Add RE" name="AddRE" class="AddRE" maxlength="10"></td>
-                        <td> <input type="text" id="VisionRE" placeholder="Vision RE" name="VisionRE" class="VisionRE" maxlength="10"></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">LE</th>
-                        <td> <input type="text" id="DSphLE" placeholder="D.Sph LE" name="DSphLE" class="DSphLE" maxlength="10"></td>
-                        <td> <input type="text" id="DCylLE" placeholder="D.Cyl LE" name="DCylLE" class="DCylLE" maxlength="10"></td>
-                        <td> <input type="text" id="AxisLE" placeholder="Axis LE" name="AxisLE" class="AxisLE" maxlength="10"></td>
-                        <td> <input type="text" id="AddLE" placeholder="Add LE" name="AddLE" class="AddLE" maxlength="10"></td>
-                        <td> <input type="text" id="VisionLE" placeholder="Vision LE" name="VisionLE" class="VisionLE" maxlength="10"></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                <!-- Spectacle lenses starts-->
-                  <!-- Remarks starts-->
-        <section class="row chief-complain border mt-1 pb-1 pt-1 ml-1 mr-1">
-            <div class="col-3 pr-0 mt-2">
-                <h5 class="">Remarks #</h5>
-            </div>
-            <div class="col-9">
-                <input type="text" id="remarks" placeholder="Enter Remarks " name="remarks"
-                    class="cheifComplains" maxlength="40">
-            </div>
-        </section>
-        <!-- Remarks ends-->
-                  <!-- Created By starts-->
-        <section class="row chief-complain border mt-1 pb-1 pt-1 ml-1 mr-1">
-            <div class="col-3 pr-0 mt-2">
-                <h5 class="">Created By #</h5>
-            </div>
-            <div class="col-9">
-                <input type="text" id="createdBy" placeholder="Enter Staf Name" name="CreatedBy"
-                    class="cheifComplains" maxlength="20" required>
-            </div>
-        </section>
-        <button type="submit" id="submit" class="btn btn-warning">Generate Prescription PDF</button>
-    </form>
+            <!--History and Treatment starts-->
+            <section class="row history-treatment mt-1">
+                <div class="col-4 pl-2">
+                    <div class="history-box">History & Clinical Finding</div>
+                    <div class="history-desc">
+                        <textarea id="historyDetails" class="form-control" aria-label="With textarea" rows="10"
+                            cols="50" placeholder="Enter History & Clinical Finding"></textarea>
+                    </div>
+                    <!--Investigation starts-->
+
+                    <p>Investigation :</p>
+                    <input type="text" id="bp" placeholder="Enter BP Value Eg. 120/80" name="bp" class="bp"
+                        maxlength="15">
+                    <input type="text" id="ppbs" placeholder="Enter PPBS Value" name="ppbs" class="ppbs" maxlength="15">
+                    <input type="text" id="biometry" placeholder="Enter Biometry Value" name="biometry" class="biometry"
+                        maxlength="15">
+                    <input type="text" id="syringing" placeholder="Enter Syringing Value" name="syringing"
+                        class="syringing" maxlength="15">
+                    <input type="text" id="tonometry" placeholder="Enter Tonometry Value" name="tonometry"
+                        class="tonometry" maxlength="15">
+                    <input type="text" id="ecg" placeholder="Enter ECG Value" name="ecg" class="ecg" maxlength="15">
+                    <!--Investigation ends-->
+
+                </div>
+                <div class="col-8 pr-2 pl-0">
+                    <div class="treatment-box">Treatment</div>
+                    <div class="treatment-desc"></div>
+                    <textarea id="treatmentDetails" class="form-control" aria-label="With textarea" rows="10" cols="50"
+                        placeholder="Enter Medicine Details Eg: 1. Paracitamol 500"></textarea>
+                    <!-- Spectacle lenses starts-->
+                    <div class="treatment-box mt-1">Spectacle Lenses</div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">Eye</th>
+                                <th scope="col">D.Sph</th>
+                                <th scope="col">D.Cyl</th>
+                                <th scope="col">Axis</th>
+                                <th scope="col">Add</th>
+                                <th scope="col">Vision</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">RE</th>
+                                <td> <input type="text" id="DSphRE" placeholder="D.Sph RE" name="DSphRE" class="DSphRE"
+                                        maxlength="10"></td>
+                                <td> <input type="text" id="DCylRE" placeholder="D.Cyl RE" name="DCylRE" class="DCylRE"
+                                        maxlength="10"></td>
+                                <td> <input type="text" id="AxisRE" placeholder="Axis RE" name="AxisRE" class="AxisRE"
+                                        maxlength="10"></td>
+                                <td> <input type="text" id="AddRE" placeholder="Add RE" name="AddRE" class="AddRE"
+                                        maxlength="10"></td>
+                                <td> <input type="text" id="VisionRE" placeholder="Vision RE" name="VisionRE"
+                                        class="VisionRE" maxlength="10"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">LE</th>
+                                <td> <input type="text" id="DSphLE" placeholder="D.Sph LE" name="DSphLE" class="DSphLE"
+                                        maxlength="10"></td>
+                                <td> <input type="text" id="DCylLE" placeholder="D.Cyl LE" name="DCylLE" class="DCylLE"
+                                        maxlength="10"></td>
+                                <td> <input type="text" id="AxisLE" placeholder="Axis LE" name="AxisLE" class="AxisLE"
+                                        maxlength="10"></td>
+                                <td> <input type="text" id="AddLE" placeholder="Add LE" name="AddLE" class="AddLE"
+                                        maxlength="10"></td>
+                                <td> <input type="text" id="VisionLE" placeholder="Vision LE" name="VisionLE"
+                                        class="VisionLE" maxlength="10"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- Spectacle lenses starts-->
+                    <!-- Remarks starts-->
+                    <section class="row chief-complain border mt-1 pb-1 pt-1 ml-1 mr-1">
+                        <div class="col-3 pr-0 mt-2">
+                            <h5 class="">Remarks #</h5>
+                        </div>
+                        <div class="col-9">
+                            <input type="text" id="remarks" placeholder="Enter Remarks " name="remarks"
+                                class="cheifComplains" maxlength="40">
+                        </div>
+                    </section>
+                    <!-- Remarks ends-->
+                    <!-- Created By starts-->
+                    <section class="row chief-complain border mt-1 pb-1 pt-1 ml-1 mr-1">
+                        <div class="col-3 pr-0 mt-2">
+                            <h5 class="">Created By #</h5>
+                        </div>
+                        <div class="col-9">
+                            <input type="text" id="createdBy" placeholder="Enter Staf Name" name="CreatedBy"
+                                class="cheifComplains" maxlength="20" required>
+                        </div>
+                    </section>
+                    <button type="submit" id="submit" class="btn btn-warning">Generate Prescription PDF</button>
+                    <button type="submit" id="reset" class="btn btn-danger">Reset or Clear</button>
+        </form>
+        <p class="copyright"> Developed & Designed By SK Aminul Islam (emd.developer@gmail.com)</p>
         <!-- Created By ends-->
-            </div>
+    </div>
     </div>
     </section>
     <!--History and Treatment starts-->
@@ -203,18 +222,29 @@
 
     <!-- Add an iframe to view the generated PDF -->
 
-    <div class="pdf-viewer">
+    <!-- <div class="pdf-viewer">
         <iframe id="pdfFrame" class="pdfFrame" width="1500" height="1000"></iframe>
-    </div>
-    <!--POPUP -->
-    <!-- <div class="wrapper">
-        <a href="#demo-modal">Open Demo Modal</a>
     </div> -->
+    <!--POPUP -->
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary zero" data-toggle="modal" data-target="#exampleModal" id="openModal">
+    </button>
 
-    <div id="demo-modal" class="modal">
-        <div class="modal__content">
-            <div class="pdf-viewer">
-                <iframe id="pdfFrame" class="pdfFrame"></iframe>
+    <!-- Modal -->
+    <div class="modal fade pdf-modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog" role="document" style="max-width: 1300px;">
+
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="pdf-viewer">
+                        <iframe id="pdfFrame" class="pdfFrame" width="1250" height="1000"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

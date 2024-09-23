@@ -7,17 +7,17 @@ $(document).ready(function () {
     //VER Number
     const displayVer = 1001;
     $('#ver').val($('#ver').val() + displayVer);
+ 
+    //Reset
+    
+   
 
-    //
-
-
-    setTimeout(() => {
-        $('#submit').click();
-    }, 500);
     $('#prescriptionForm').on('submit', function (event) {
         event.preventDefault();
 
-        
+         setTimeout(() => {
+        $('#openModal').click();
+        }, 1500);
 
         // Get form data
         //const drName = $('#drName').val();
