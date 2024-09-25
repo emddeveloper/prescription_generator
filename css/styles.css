@@ -22,7 +22,9 @@ input:-moz-placeholder { color:#f00;  font-size: 15px;font-weight: 400;}
 /*  POPUP*/
 
   /*Bootstrap */
-
+h5{
+  font-size:12px !important;
+}
   .main-container{
     border: 2px solid #0818a8;
     height: auto;
@@ -57,14 +59,16 @@ input:-moz-placeholder { color:#f00;  font-size: 15px;font-weight: 400;}
 
   .middle-box h2{
     font-weight: bold;
-    font-size: 48px;
+    font-size: 35px;
     margin-bottom: 0;
   }
 
   .middle-box img{
-    width: 240px;
-    height: 35px;
-    margin-bottom: 6px;
+    width: 170px;
+    height: 27px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
   }
   .middle-box h5{
     font-weight: bold;
@@ -86,20 +90,20 @@ input:-moz-placeholder { color:#f00;  font-size: 15px;font-weight: 400;}
   }
 
   .vission-report h3{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     margin: 0;
     text-align: center;
   }
 
   .vission-report .ver{
-    width: 180px;
-    font-size: 16px;
+    width: 130px;
+    font-size: 12px;
   }
 
   .vission-report .datePicker{
-    width: 180px;
-    font-size: 16px;
+    width: 130px;
+    font-size: 12px;
   }
 
   .patient-details{
@@ -114,16 +118,16 @@ input:-moz-placeholder { color:#f00;  font-size: 15px;font-weight: 400;}
   }
   .patient-details select.form-control{
     padding: 0;
-    height: 24px;
+    height: 20px;
     line-height: 0;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
   }
 
   .patient-details .name , .patient-details .age{
     font-size: 20px;
-    padding: 3px;
-    font-size: 16px;
+    padding: 7px;
+    font-size: 12px;
     font-weight: bold;
     border-radius: 4px;
     border: 1px solid #ced4da;
@@ -201,7 +205,7 @@ input.cheifComplains{
   background-color: #0818a8;
   color: #fff;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
   padding: 7px 0;
   line-height: 22px;
@@ -211,16 +215,17 @@ input.cheifComplains{
   background-color: #0818a8;
   color: #fff;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
   padding: 7px 0;
   line-height: 22px;
 }
 .history-treatment p{
   color: #0818a8;
-  font-size: 20px;
+  font-size: 14px;
   text-decoration: underline;
   font-weight: bold;
+  margin-top: 10px;
 }
 
 .history-treatment input{
@@ -228,7 +233,7 @@ input.cheifComplains{
 }
 .btn{
   margin-left: 200px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   margin-top: 20px;
 }
 table th{
@@ -249,6 +254,193 @@ table tr{
 p.copyright{
   text-decoration: dashed;
   color: rgb(52, 7, 216);
-  font-size: 12px;
+  font-size: 10px;
   font-style: italic;
+  margin-bottom: 0;
 }
+
+.modal-body{
+  padding: 0 !important;
+}
+
+.close {
+  font-size: 42px !important;
+  color: #f00 !important;
+  opacity: 1 !important;
+  padding-right: 10px !important;
+}
+/* Style for the marquee */
+.marquee {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fc1414; /* You can adjust the color as needed */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow */
+  animation: marquee 10s linear infinite; /* Animation properties */
+}
+
+.marquee img{
+  width: 100px;
+  height: 40px;
+}
+/* Keyframes for the marquee animation */
+
+/*Expired Page CSS starts*/
+.expired-body {
+  background: rgba(96, 196, 196, .3);
+  font-family: 'Open-sans', sans-serif;
+}
+svg {
+  width: 30%;
+  margin: 0 5% 3vh !important;
+}
+
+.st0{fill:#EFCBB4;}
+.st1{fill:#FFE1CA;}
+.st2{fill:#473427;}
+.st3{
+    fill:none;
+    stroke:#473427;
+    stroke-width:7;
+    stroke-linecap:round;
+    stroke-miterlimit:10;
+}
+.st4{fill:#D37D42;stroke:#D37D42;stroke-miterlimit:10;}
+
+.smile {
+  display: none;
+}
+.uhoh {
+  display: none;
+}
+path.smile {
+    fill-opacity: 0;
+    stroke: #000;
+    stroke-width: 6;
+    stroke-dasharray: 870;
+    stroke-dashoffset: 870;
+    animation: draw 7s infinite linear;
+  }
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+#path {
+  stroke-dasharray: 628.3185307179587;
+  animation: dash 5s linear forwards;
+}
+@keyframes dash {
+  from {
+    stroke-dashoffset: 628.3185307179587;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.message {
+  float: right;
+  margin: 10em 10em 0 0;
+  padding: 0 2em;
+}
+.message h1 {
+  color: #3698DC;
+  font-size: 3vw !important;
+  font-weight: 400;
+}
+.message p {
+  color: #262C34;
+  font-size: 1.3em;
+  font-weight: lighter;
+  line-height: 1.1em;
+}
+.light {
+  position: relative;
+  top: -36em;
+}
+.light_btm {
+  position: relative;
+}
+.light span:first-child {
+  display: block;
+  height: 6px;
+  width: 150px;
+  position: absolute;
+  top:5em;
+  left: 20em;
+  background: #fff;
+  border-radius: 3px;
+/*   transform: rotate(40deg); */
+}
+.light span:nth-child(2) {
+  display: block;
+  height: 6px;
+  width: 200px;
+  position: absolute;
+  top:6em;
+  left: 19em;
+  background: #fff;
+  border-radius: 3px;
+/*   transform: rotate(40deg); */
+}
+.light span:nth-child(3) {
+  display: block;
+  height: 6px;
+  width: 100px;
+  position: absolute;
+  top:7em;
+  left: 24em;
+  background: #fff;
+  border-radius: 3px;
+/*   transform: rotate(40deg); */
+}
+
+.light_btm span:first-child {
+  display: block;
+  height: 6px;
+  width: 150px;
+  position: absolute;
+  bottom:6em;
+  right: 20em;
+  background: #fff;
+  border-radius: 3px;
+/*   transform: rotate(40deg); */
+}
+.light_btm span:nth-child(2) {
+  display: block;
+  height: 6px;
+  width: 200px;
+  position: absolute;
+  bottom: 7em;
+  right: 21em;
+  background: #fff;
+  border-radius: 3px;
+/*   transform: rotate(40deg); */
+}
+.light_btm span:nth-child(3) {
+  display: block;
+  height: 6px;
+  width: 100px;
+  position: absolute;
+  bottom:8em;
+  right: 24em;
+  background: #fff;
+  border-radius: 3px;
+/*   transform: rotate(40deg); */
+}
+.use-desktop {
+  font-weight: 400;
+  color: #3698DC;
+  border: 1px solid white;
+  height: 3.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 25px;
+  line-height: 1.1em;
+  font-size: 5vw;
+}
+
+/*Expired Page CSS Ends*/
