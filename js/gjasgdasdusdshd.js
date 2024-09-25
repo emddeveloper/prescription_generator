@@ -35,14 +35,14 @@ $(document).ready(function() {
         $('.expired-body').css('display', 'none');
     }
     //Force Expired True to OFF the service
-    const forceExpired = true;
+    const forceExpired = false; //Default false
     if(forceExpired){
         $('.main-container').css('display', 'none');
         $('.marquee-container').css('display', 'none');
         $('.expired-body').css('display', 'block');
     }
     //ForceResume true to resume ON the service
-    const forceResume = false;
+    const forceResume = false; //Default false
     if(forceResume){
         $('.main-container').css('display', 'block');
         $('.marquee-container').css('display', 'block');
