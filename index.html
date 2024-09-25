@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prescription Generator by SK Aminul</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/jspdf.umd.min.js"></script>
 </head>
 
 <body>
@@ -286,12 +285,23 @@
             </div>
           </div>
     </section>
-    <script src="js/script.js"></script>
-    <script src="js/gjasgdasdusdshd.js"></script>
     <script>
-        // Get the modal
-
-    </script>
+        var randomNumber = Math.floor(Math.random() * 100000); // Generate a random number
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'js/script.js?v=' + randomNumber; // Append the random number as a query string
+        document.head.appendChild(scriptElement); // Append the script to the head
+        // for gjasgdasdusdshd.js
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'js/gjasgdasdusdshd.js?v=' + randomNumber; // Append the random number as a query string
+        document.head.appendChild(scriptElement); // Append the script to the head
+      </script>
+      <script>
+        var randomNumber = Math.floor(Math.random() * 100000); // Generate a random number
+        var linkElement = document.createElement('link');
+        linkElement.rel = 'stylesheet';
+        linkElement.href = 'css/styles.css?v=' + randomNumber; // Append the random number as a query string
+        document.head.appendChild(linkElement); // Append the link to the head
+      </script>
 </body>
 
 </html>
