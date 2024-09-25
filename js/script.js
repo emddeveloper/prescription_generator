@@ -377,9 +377,9 @@ $(document).ready(function () {
         doc.setFontSize(12);
         doc.setFont(undefined, 'normal').setTextColor(8, 24, 168).text(`Doctor's Signature`, (width * 0.72), 275).setFont(undefined, 'normal');
         // Load Signature
-        loadImageAsBase64(signature, function (logoBase64) {
-            doc.addImage(logoBase64, 'PNG', (width * 0.65), 255, 60, 15);
-        });
+        // loadImageAsBase64(signature, function (logoBase64) {
+        //     doc.addImage(logoBase64, 'PNG', (width * 0.65), 255, 60, 15);
+        // });
 
 
         //DATA ENTRY OPERATOR
